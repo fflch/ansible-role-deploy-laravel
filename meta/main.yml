@@ -2,6 +2,7 @@ galaxy_info:
   author: thiagogomesverissimo
   description: deploy laravel
   company: USPdev
+  role_name: deploy_laravel
 
   license: "license (BSD, MIT)"
 
