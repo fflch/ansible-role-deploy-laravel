@@ -3,6 +3,11 @@ Ansible Role: deploy laravel
 
 This role does:
 
+Installation
+--------------
+
+    ansible-galaxy install uspdev.deploy_laravel
+
 Role Variables
 --------------
 
