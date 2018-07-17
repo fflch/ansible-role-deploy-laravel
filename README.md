@@ -17,4 +17,4 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - uspdev.deploy-laravel
+         - uspdev.deploy_laravel
