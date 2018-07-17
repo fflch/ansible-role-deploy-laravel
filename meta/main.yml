@@ -1,6 +1,6 @@
 galaxy_info:
   author: thiagogomesverissimo
-  description: deploy samba
+  description: deploy laravel
   company: USPdev
 
   license: "license (BSD, MIT)"
