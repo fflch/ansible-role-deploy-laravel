@@ -1,0 +1,18 @@
+galaxy_info:
+  author: thiagogomesverissimo
+  description: deploy samba
+  company: USPdev
+
+  license: "license (BSD, MIT)"
+
+  min_ansible_version: 2.2
+  github_branch: master
+
+  platforms:
+   - name: Ubuntu
+     versions:
+     - bionic
+  galaxy_tags:
+    - laravel
+
+dependencies: []
