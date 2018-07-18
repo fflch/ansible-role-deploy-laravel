@@ -3,6 +3,7 @@ deploy_laravel_app: "myapp"
 deploy_laravel_domain: "uspdev.usp.br"
 deploy_laravel_dest: "/var/www/"
 deploy_laravel_repo: "https://github.com/uspdev/copaco.git"
+deploy_laravel_protocol: "http"
 deploy_laravel_dbpass_file: "/etc/.{{myapp}}"
 deploy_laravel_dbhost: 'localhost'
 deploy_laravel_dbname: 'myapp'
