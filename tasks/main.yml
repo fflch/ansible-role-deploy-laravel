@@ -1,6 +1,2 @@
 ---
-- name: update
-  apt:
-    update_cache: yes
-
 - import_tasks: deploy.yml
