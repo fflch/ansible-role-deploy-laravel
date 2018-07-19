@@ -3,6 +3,7 @@
   git:
     repo: "{{ deploy_laravel_repo }}"
     dest: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+    force: yes
     update: yes
 
 - name: composer install
