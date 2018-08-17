@@ -8,4 +8,5 @@ deploy_laravel_dbpass_file: "/etc/.{{myapp}}"
 deploy_laravel_dbhost: 'localhost'
 deploy_laravel_dbname: 'myapp'
 deploy_laravel_dbuser: 'myapp'
+deploy_laravel_env: 'production'
 
