@@ -33,7 +33,7 @@
 
 - name: move .env.temp to production
   shell: >
-    mv .env.tem .env
+    mv .env.temp .env
   args:
     chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
 
