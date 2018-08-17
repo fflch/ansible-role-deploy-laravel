@@ -23,7 +23,7 @@
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
   with_items:
-    - { regexp: '^APP_ENV=', line: "APP_ENV=production" }
+    - { regexp: '^APP_ENV=', line: "APP_ENV={{ deploy_laravel_env }}" }
     - { regexp: '^APP_DEBUG=', line: "APP_DEBUG=false" }
     - { regexp: '^APP_URL=', line: "APP_URL={{ deploy_laravel_protocol }}://{{ deploy_laravel_domain }}" }
     - { regexp: '^DB_HOST=', line: "DB_HOST={{ deploy_laravel_dbhost }}" }
