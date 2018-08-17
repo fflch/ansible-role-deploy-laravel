@@ -10,6 +10,8 @@
   composer:
     command: install
     working_dir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+  environment:
+    APP_ENV: "{{ deploy_laravel_env }}"
 
 - name: copy .env.example to a temporary file
   shell: >
