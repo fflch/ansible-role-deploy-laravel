@@ -10,4 +10,5 @@ deploy_laravel_dbname: 'myapp'
 deploy_laravel_dbuser: 'myapp'
 deploy_laravel_env: 'production'
 deploy_laravel_no_dev: no
+deploy_laravel_build_assest: yes
 
