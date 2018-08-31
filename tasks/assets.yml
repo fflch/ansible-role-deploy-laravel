@@ -1,0 +1,12 @@
+---
+- name: npm install
+  npm:
+    name: install
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+  when: deploy_laravel_build_assest
+
+- name: npm run
+  npm:
+    name: run "{{deploy_laravel_env}}"
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+  when: deploy_laravel_build_assest
