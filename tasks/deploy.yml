@@ -3,6 +3,7 @@
   git:
     repo: "{{ deploy_laravel_repo }}"
     dest: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+    version: "{{ deploy_laravel_repo_version }}"
     force: yes
     update: yes
 
