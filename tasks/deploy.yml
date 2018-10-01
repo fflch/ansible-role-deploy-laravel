@@ -30,7 +30,24 @@
     - { regexp: '^DB_HOST=', line: "DB_HOST={{ deploy_laravel_dbhost }}" }
     - { regexp: '^DB_DATABASE=', line: "DB_DATABASE={{ deploy_laravel_dbname }}" }
     - { regexp: '^DB_USERNAME=', line: "DB_USERNAME={{ deploy_laravel_dbuser }}" }
+
+- name: set password from file
+  lineinfile:
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}/.env.temp"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
     - { regexp: '^DB_PASSWORD=', line: "DB_PASSWORD='{{ lookup('file', deploy_laravel_dbpass_file) }}'" }
+  when: deploy_laravel_dbpass_from_file 
+
+- name: set password from variable
+  lineinfile:
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}/.env.temp"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - { regexp: '^DB_PASSWORD=', line: "DB_PASSWORD='{{ deploy_laravel_dbpass }}'" }
+  when: not deploy_laravel_dbpass_from_file 
 
 - name: move .env.temp to production
   shell: >
