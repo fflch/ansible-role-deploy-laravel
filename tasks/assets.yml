@@ -2,11 +2,16 @@
 - name: npm install
   npm:
     name: install
-    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
   when: deploy_laravel_build_assest
+  tags:
+    - deploy_laravel
 
 - name: npm run
-  npm:
-    name: run "{{deploy_laravel_env}}"
-    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_app }}"
+  shell: "npm run production"
+  ignore_errors: True
+  args:
+    chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
   when: deploy_laravel_build_assest
+  tags:
+    - deploy_laravel

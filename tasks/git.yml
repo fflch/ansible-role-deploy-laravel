@@ -1,0 +1,9 @@
+- name: clone repo
+  git:
+    repo: "{{ deploy_laravel_repo }}"
+    dest: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
+    version: "{{ deploy_laravel_repo_version }}"
+    force: yes
+    update: yes
+  tags:
+    - deploy_laravel

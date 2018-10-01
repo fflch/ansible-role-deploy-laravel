@@ -1,19 +1,31 @@
 ---
-deploy_laravel_app: "myapp"
 deploy_laravel_domain: "uspdev.usp.br"
 deploy_laravel_dest: "/var/www/"
-deploy_laravel_repo: "https://github.com/uspdev/copaco.git"
+deploy_laravel_repo: "https://github.com/laravel/laravel.git"
 deploy_laravel_repo_version: "master"
-deploy_laravel_protocol: "http"
-deploy_laravel_dbhost: 'localhost'
-deploy_laravel_dbname: 'myapp'
-deploy_laravel_dbuser: 'myapp'
-deploy_laravel_dbpass: 123
-deploy_laravel_env: 'production'
-deploy_laravel_no_dev: no
-deploy_laravel_build_assest: yes
 
-# get password database from a file 
+# Disables installation of require-dev packages
+deploy_laravel_composer_no_dev: no
+
+# turn on/off some options
+deploy_laravel_build_assest: yes
+deploy_laravel_generate_key: no
+deploy_laravel_use_apache: yes
+
+# do you desire get password database from a file?
 deploy_laravel_dbpass_from_file: no
 deploy_laravel_dbpass_file: "/etc/.jenkinsdeploy/{{deploy_laravel_app}}"
+
+# Env variables
+deploy_laravel_env:
+  - name: DB_USERNAME
+    value: 'laravel'
+  - name: DB_PASSWORD
+    value: 'secret'
+  - name: DB_DATABASE
+    value: 'laravel'
+  - name: DB_HOST
+    value: "localhost"
+  - name: APP_ENV
+    value: "production"
 

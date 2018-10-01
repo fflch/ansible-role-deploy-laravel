@@ -1,0 +1,7 @@
+- name: composer install
+  composer:
+    command: install
+    working_dir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
+    no_dev: "{{ deploy_laravel_composer_no_dev }}"
+  tags:
+    - deploy_laravel

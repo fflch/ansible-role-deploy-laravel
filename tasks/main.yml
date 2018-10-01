@@ -1,3 +1,7 @@
 ---
-- import_tasks: deploy.yml
+- import_tasks: git.yml
+- import_tasks: composer.yml
+- import_tasks: env.yml
+- import_tasks: migration.yml
+- import_tasks: apache.yml
 - import_tasks: assets.yml
