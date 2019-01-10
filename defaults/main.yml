@@ -8,7 +8,7 @@ deploy_laravel_repo_version: "master"
 deploy_laravel_composer_no_dev: no
 
 # turn on/off some options
-deploy_laravel_build_assest: yes
+deploy_laravel_build_assets: yes
 deploy_laravel_generate_key: no
 deploy_laravel_use_apache: yes
 
