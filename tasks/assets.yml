@@ -1,6 +1,6 @@
 ---
 - name: npm install
-  shell: "npm install production --silent"
+  shell: "npm install"
   args:
     chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
   when: deploy_laravel_build_assets
