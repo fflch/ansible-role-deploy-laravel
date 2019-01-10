@@ -1,0 +1,9 @@
+- name: owner www-data
+  file:
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
+    state: directory
+    owner: www-data
+    group: www-data
+    recurse: yes
+  tags:
+    - deploy_laravel

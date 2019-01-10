@@ -6,17 +6,6 @@
   tags:
     - deploy_laravel
 
-- name: owner www-data
-  file:
-    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
-    state: directory
-    owner: www-data
-    group: www-data
-    recurse: yes
-  when: deploy_laravel_use_apache
-  tags:
-    - deploy_laravel
-
 - name: active virtualhost
   shell: a2ensite "{{ deploy_laravel_domain }}"
   args:
