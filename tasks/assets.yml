@@ -3,15 +3,15 @@
   npm:
     name: install
     path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
-  when: deploy_laravel_build_assest
+  when: deploy_laravel_build_assets
   tags:
     - deploy_laravel
 
 - name: npm run
-  shell: "npm run production"
+  shell: "npm run --silent production"
   ignore_errors: True
   args:
     chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
-  when: deploy_laravel_build_assest
+  when: deploy_laravel_build_assets
   tags:
     - deploy_laravel
