@@ -1,5 +1,5 @@
 - name: cache clear
-  shell: php artisan config:cache
+  shell: php artisan view:clear
   args:
     chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
   tags:
