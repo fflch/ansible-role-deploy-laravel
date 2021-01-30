@@ -29,3 +29,13 @@ deploy_laravel_env:
   - name: APP_ENV
     value: "production"
 
+# task schedule vars to cron
+deploy_laravel_cron: false
+deploy_laravel_cron_name: "task scheduling"
+deploy_laravel_cron_job: "cd {{ deploy_laravel_dest}}{{ deploy_laravel_domain }}
+                          && php artisan schedule:run >> /dev/null 2>&1"
+deploy_laravel_cron_minute: "*"
+deploy_laravel_cron_hour: "*"
+deploy_laravel_cron_day: "*"
+deploy_laravel_cron_month: "*"
+deploy_laravel_cron_weekday: "*"
