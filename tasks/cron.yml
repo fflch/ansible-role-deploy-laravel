@@ -1,0 +1,9 @@
+- name: add cron task scheduling
+  cron:
+    job: "{{ deploy_laravel_cron_job }}"
+    name: "{{ deploy_laravel_cron_name }}"
+    minute: "{{ deploy_laravel_cron_minute }}"
+    hour: "{{ deploy_laravel_cron_hour }}"
+    day: "{{ deploy_laravel_cron_day }}"
+    month: "{{ deploy_laravel_cron_month }}"
+    weekday: "{{ deploy_laravel_cron_weekday }}"
