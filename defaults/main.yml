@@ -31,8 +31,3 @@ deploy_laravel_env:
 
 # task schedule vars to cron
 deploy_laravel_cron: false
-deploy_laravel_cron_minute: "0"
-deploy_laravel_cron_hour: "*/6"
-deploy_laravel_cron_day: "*"
-deploy_laravel_cron_month: "*"
-deploy_laravel_cron_weekday: "*"

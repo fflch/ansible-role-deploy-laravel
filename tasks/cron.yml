@@ -2,8 +2,8 @@
   cron:
     job: "cd {{ deploy_laravel_dest}}{{ deploy_laravel_domain }} && php artisan schedule:run >> /dev/null 2>&1"
     name: "task scheduling {{ deploy_laravel_domain }}"
-    minute: "{{ deploy_laravel_cron_minute }}"
-    hour: "{{ deploy_laravel_cron_hour }}"
-    day: "{{ deploy_laravel_cron_day }}"
-    month: "{{ deploy_laravel_cron_month }}"
-    weekday: "{{ deploy_laravel_cron_weekday }}"
+    minute: "*/5"
+    hour: "*"
+    day: "*"
+    month: "*"
+    weekday: "*"
