@@ -1,7 +1,7 @@
 Ansible Role: deploy laravel
 ===========================
 
-This role does:
+This role does: deploy a laravel application
 
 Installation
 --------------
