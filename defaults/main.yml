@@ -30,4 +30,4 @@ deploy_laravel_env:
     value: "production"
 
 # task schedule vars to cron
-deploy_laravel_cron: false
+deploy_laravel_cron: true
