@@ -31,11 +31,8 @@ deploy_laravel_env:
 
 # task schedule vars to cron
 deploy_laravel_cron: false
-deploy_laravel_cron_name: "task scheduling {{ deploy_laravel_domain }}"
-deploy_laravel_cron_job: "cd {{ deploy_laravel_dest}}{{ deploy_laravel_domain }}
-                          && php artisan schedule:run >> /dev/null 2>&1"
 deploy_laravel_cron_minute: "0"
-deploy_laravel_cron_hour: "0,6,12,18"
+deploy_laravel_cron_hour: "*/6"
 deploy_laravel_cron_day: "*"
 deploy_laravel_cron_month: "*"
 deploy_laravel_cron_weekday: "*"
