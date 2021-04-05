@@ -11,3 +11,7 @@
 - import_tasks: cron.yml
   when: deploy_laravel_cron
 
+- import_tasks: supervisor.yml
+  when: deploy_laravel_supervisor
+  
+

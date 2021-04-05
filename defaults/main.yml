@@ -31,3 +31,6 @@ deploy_laravel_env:
 
 # task schedule vars to cron
 deploy_laravel_cron: true
+
+# enable supervisor
+deploy_laravel_supervisor: true
