@@ -6,7 +6,7 @@
 - name: supervisor.j2
   template:
     src: templates/supervisor.j2
-    dest: "/etc/supervisor/conf.d/{{ deploy_laravel_env.DB_USERNAME }}_queue_worker_default.conf"
+    dest: "/etc/supervisor/conf.d/{{ deploy_laravel_domain.split('.')[0] | lower }}_queue_worker_default.conf"
   tags:
     - deploy_laravel
 
@@ -16,6 +16,5 @@
 - name: supervisorctl update
   shell: supervisorctl update
 
-
-- name: 'supervisorctl restart all'
-  shell: 'supervisorctl restart all'
+- name: supervisorctl restart all
+  shell: supervisorctl restart all

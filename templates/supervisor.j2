@@ -1,4 +1,4 @@
-[program:{{ deploy_laravel_env.DB_USERNAME }}_queue_worker_default]
+[program:{{ deploy_laravel_domain.split(".")[0] | lower }}_queue_worker_default]
 process_name=%(program_name)s_%(process_num)02d
 command=/usr/bin/php {{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}/artisan queue:work --queue=default --tries=3 --timeout=120
 stderr_logfile=/var/log/supervisor/{{ deploy_laravel_domain }}.log
@@ -6,7 +6,6 @@ autostart=true
 autorestart=true
 stopasgroup=true
 killasgroup=true
-user=forge
 numprocs=4
 redirect_stderr=true
 stopwaitsecs=3600
