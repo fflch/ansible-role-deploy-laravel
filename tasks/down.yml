@@ -1,4 +1,4 @@
 - name: application down
-  shell: php artisan down
+  shell: php artisan down --render="errors::minimal"
   args:
     chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
