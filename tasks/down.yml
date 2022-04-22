@@ -1,4 +1,10 @@
+- name: Verifica de instalação existe
+  stat:
+    path: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}/artisan"
+  register: site_already_deployed
+
 - name: application down
   shell: php artisan down --render="errors::minimal"
   args:
     chdir: "{{ deploy_laravel_dest }}/{{ deploy_laravel_domain }}"
+  when: site_already_deployed.stat.exists
