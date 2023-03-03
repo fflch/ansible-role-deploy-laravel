@@ -1,3 +1,15 @@
+- name: Gitconfig list
+  command: git config --list
+  register: gitconfig
+
+- name: Pesquisa e atribui o valor do domínio
+  set_fact:
+    domain: "{{ gitconfig.stdout_lines | regex_search(deploy_laravel_domain) }}"
+
+- name: Adiciona o domínio como safe.directory no gitconfig
+  command: git config --global --add safe.directory "{{ deploy_laravel_dest }}{{ deploy_laravel_domain }}"
+  when: not domain
+
 - name: clone repo
   git:
     repo: "{{ deploy_laravel_repo }}"
