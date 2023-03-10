@@ -5,5 +5,6 @@
     no_dev: "{{ deploy_laravel_composer_no_dev }}"
   environment:
     COMPOSER_NO_INTERACTION: "1"
+    COMPOSER_ALLOW_SUPERUSER: "1"
   tags:
     - deploy_laravel
