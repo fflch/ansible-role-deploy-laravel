@@ -14,7 +14,7 @@
 
 - import_tasks: supervisor.yml
   when: deploy_laravel_supervisor
-  
+
 - import_tasks: up.yml
-  
+- import_tasks: queue.yml
 
